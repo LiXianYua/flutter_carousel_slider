@@ -15,7 +15,7 @@ class CarouselOptions {
 
   /// The fraction of the viewport that each page should occupy.
   ///
-  /// Defaults to 0.8, which means each page fills 80% of the carousel.
+  /// Defaults to 1, which means each page fills 80% of the carousel.
   final double viewportFraction;
 
   /// The initial page to show when first creating the [CarouselSlider].
@@ -127,7 +127,7 @@ class CarouselOptions {
   CarouselOptions({
     this.height,
     this.aspectRatio: 16 / 9,
-    this.viewportFraction: 0.8,
+    this.viewportFraction: 1,
     this.initialPage: 0,
     this.enableInfiniteScroll: true,
     this.reverse: false,
