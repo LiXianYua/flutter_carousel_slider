@@ -9,7 +9,7 @@ import 'utils.dart';
 abstract class CarouselController {
   bool get ready;
 
-  Future<Null> get onReady;
+  Future<void> get onReady;
 
   Future<void> nextPage({Duration? duration, Curve? curve});
 
@@ -27,7 +27,7 @@ abstract class CarouselController {
 }
 
 class CarouselControllerImpl implements CarouselController {
-  final Completer<Null> _readyCompleter = Completer<Null>();
+  final Completer<void> _readyCompleter = Completer<void>();
 
   CarouselState? _state;
 
@@ -44,7 +44,7 @@ class CarouselControllerImpl implements CarouselController {
   bool get ready => _state != null;
 
   @override
-  Future<Null> get onReady => _readyCompleter.future;
+  Future<void> get onReady => _readyCompleter.future;
 
   /// Animates the controlled [CarouselSlider] to the next page.
   ///

@@ -124,6 +124,8 @@ class CarouselOptions {
   /// Exposed clipBehavior of PageView
   final Clip clipBehavior;
 
+  final bool allowImplicitScrolling;
+
   CarouselOptions({
     this.height,
     this.aspectRatio: 16 / 9,
@@ -149,6 +151,7 @@ class CarouselOptions {
     this.disableCenter: false,
     this.padEnds = true,
     this.clipBehavior: Clip.hardEdge,
+    this.allowImplicitScrolling: false,
   });
 
   ///Generate new [CarouselOptions] based on old ones.
@@ -177,6 +180,7 @@ class CarouselOptions {
           CenterPageEnlargeStrategy? enlargeStrategy,
           bool? disableCenter,
           Clip? clipBehavior,
+          bool? allowImplicitScrolling,
           bool? padEnds}) =>
       CarouselOptions(
         height: height ?? this.height,
@@ -202,6 +206,7 @@ class CarouselOptions {
         enlargeStrategy: enlargeStrategy ?? this.enlargeStrategy,
         disableCenter: disableCenter ?? this.disableCenter,
         clipBehavior: clipBehavior ?? this.clipBehavior,
+        allowImplicitScrolling: allowImplicitScrolling ?? this.allowImplicitScrolling,
         padEnds: padEnds ?? this.padEnds,
       );
 }

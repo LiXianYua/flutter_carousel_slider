@@ -261,6 +261,7 @@ class CarouselSliderState extends State<CarouselSlider> with TickerProviderState
       pageSnapping: widget.options.pageSnapping,
       controller: carouselState!.pageController,
       reverse: widget.options.reverse,
+      allowImplicitScrolling: widget.options.allowImplicitScrolling,
       itemCount: widget.options.enableInfiniteScroll ? null : widget.itemCount,
       key: widget.options.pageViewKey,
       onPageChanged: (int index) {
